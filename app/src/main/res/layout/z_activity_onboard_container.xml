@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="37dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="10"
+                android:layout_marginTop="-10dp">
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/onboard_title_size"
+                    android:text=""
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/onboard_title_margin"
+                    android:layout_marginRight="@dimen/onboard_title_margin"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4.0">
+                    <ImageView
+                        android:id="@+id/imgOnboard"
+                        android:layout_width="@dimen/onboard_image_size"
+                        android:layout_height="@dimen/onboard_image_size"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.4"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginLeft="@dimen/onboard_message_margin"
+                    android:layout_marginRight="@dimen/onboard_message_margin"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        app:gapWidth="20dp"
+                        app:radius="5dp"
+                        app:fillColor="@color/bpRed"
+                        app:pageColor="@color/white"
+                        app:strokeColor="@color/bpRed"
+                        app:strokeWidth="1dp"/>
+                </LinearLayout>
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="3">-->
+                    <!--<Button-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/onboard_btn_height"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:fontFamily="@font/montserrat_bold"-->
+                        <!--android:layout_margin="@dimen/onboard_message_margin"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="@color/transparent"/>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="100dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:textColor="@color/colorAccent"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:gravity="center_horizontal"-->
+                        <!--android:fontFamily="@font/montserrat_bold"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_below="@+id/btnMulai"/>-->
+                <!--</RelativeLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="@dimen/onboard_message_margin"
+                    android:layout_marginRight="@dimen/onboard_message_margin">
+
+                    <TextView
+                        android:id="@+id/btnTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/onboard_btn_height"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8">
+                    <TextView
+                        android:id="@+id/txtSkip"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

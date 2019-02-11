@@ -1,0 +1,2903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lyParent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedMinimum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="afterDescendants">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="28.5dp">
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back_48"/>
+
+                    <TextView
+                        android:id="@+id/txtToolbarHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_upload_document"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toRightOf="@+id/imgBack"
+                        android:layout_marginLeft="18dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_alignLeft="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtSeparator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="|"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/txtName"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtCabang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_toRightOf="@+id/txtSeparator"
+                        android:layout_marginTop="5dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="28dp">
+                <TextView
+                    android:id="@+id/txtOne"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:background="@drawable/z_circle_step"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccent"
+                    android:layout_toRightOf="@+id/txtOne"
+                    android:layout_toLeftOf="@+id/txtTwo"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/txtTwo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="2"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:background="@drawable/z_circle_step"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccent"
+                    android:layout_toRightOf="@+id/txtTwo"
+                    android:layout_toLeftOf="@+id/txtThree"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/txtThree"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="3"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:background="@drawable/z_circle_step"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKTP">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImage1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_ktp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImage1"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKTP"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KTP*"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <TextView
+                            android:id="@+id/txtDocumentInfoKTP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"
+                            android:maxLines="2"/>
+
+                        <TextView
+                            android:id="@+id/txtDefaultKTP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKTP"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKTP"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:id="@+id/ivAttachmentKTP"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKTP"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"
+                            android:src="@drawable/ic_eye_48" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemSPK">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageSPK"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_spk_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageSPK"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentSPK"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SPK*"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentSPK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentSPK"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewSPK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKartuNama">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKartuNama"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_kartunama_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKartuNama"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKartuNama"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keterangan Pekerjaan / Usaha*"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKartuNama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKartuNama"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKartuNama"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKartuNama"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKK">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKK"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_kk_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKK"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKK"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kartu Keluarga"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKK"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemNPWP">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageNPWP"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_npwp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageNPWP"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentNPWP"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NPWP"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultNPWP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentNPWP"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentNPWP"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewNPWP"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemBuktiKeuangan">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageBuktiKeuangan"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_buktikeu_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageBuktiKeuangan"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentBuktiKeuangan"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bukti Keuangan"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultBuktiKeuangan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentBuktiKeuangan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentBuktiKeuangan"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewBuktiKeuangan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemRekeningKoran">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageRekengKoran"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_buktikeu_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageRekengKoran"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentRekeningKoran"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rekening Koran"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultRekeningKoran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentRekeningKoran"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentRekeningKoran"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewRekeningKoran"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemCoverTabungan">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageCoverTabungan"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_buktikeu_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageCoverTabungan"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentCoverTabungan"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cover Buku Tabungan"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultCoverTabungan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentCoverTabungan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentCoverBukuTabungan"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewCoverTabungan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemBuktiKepemilikanRumah">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageBuktiKepemilikanRumah"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_npwp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageBuktiKepemilikanRumah"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentBuktiKepemilikanRumah"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bukti Kepemilikan Rumah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultBuktiKepemilikanRumah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentBuktiKepemilikanRumah"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentBuktiKepemilikanRumah"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewBuktiKepemilikanRumah"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKontrakKerja">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKontrakKerja"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_npwp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKontrakKerja"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKontrakKerja"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Izin Praktek / Kontrak Kerja"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKontrakKerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKontrakKerja"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKontrakKerja"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKontrakKerja"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemSlipGaji"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageSlipGaji"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_npwp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageSlipGaji"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentSlipGaji"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Slip Gaji"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultSlipGaji"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentSlipGaji"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentSlipGaji"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewSlipGaji"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKeteranganDomisili">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKeteranganDomisili"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_ktp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKeteranganDomisili"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKeteranganDomisili"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SIUP / TDP / Keterangan Domisili"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKetDomisili"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKeteranganDomisili"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKeteranganDomisili"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKeteranganDomisili"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemBukuNikah">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageBukuNikah"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_ktp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageBukuNikah"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentBukuNikah"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buku Nikah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultBukuNikah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentBukuNikah"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentBukuNikah"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewBukuNikah"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKTPPasangan"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKTPPasangan"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_ktp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKTPPasangan"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKTPPasangan"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KTP Istri/Suami*"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKTPPasangan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKTPPasangan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKtpPasangan"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKTPPasangan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lySwitchPasanganBekerja">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apakah istri/suami bekerja?"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@+id/lySwitchInfoPasanganBekerja"/>
+
+                    <LinearLayout
+                        android:id="@+id/lySwitchInfoPasanganBekerja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:textSize="12sp"
+                            android:textColor="@color/header_text_2"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"/>
+
+                        <Switch
+                            android:id="@+id/switchInfoPasanganBekerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:textSize="12sp"
+                            android:textColor="@color/header_text_2"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="-3dp"/>
+                    </LinearLayout>
+
+                    <!--<Switch-->
+                        <!--android:id="@+id/switchInfoPasanganBekerja"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:layout_marginBottom="8dp"-->
+                        <!--android:layout_marginRight="8dp" />-->
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKartuNamaPasangan"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKartuNamaPasangan"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_kartunama_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKartuNamaPasangan"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKartuNamaPasangan"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keterangan Pekerjaan / Usaha Istri / Suami*"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKartuNamaPasangan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKartuNamaPasangan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKartuNamaPasangan"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKartuNamaPasangan"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lySwitchSTNKCustomer">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STNK Atas Nama Customer"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@+id/lySwitchInfoSTNKCustomer"/>
+
+                    <LinearLayout
+                        android:id="@+id/lySwitchInfoSTNKCustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:textSize="12sp"
+                            android:textColor="@color/header_text_2"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"/>
+
+                        <Switch
+                            android:id="@+id/switchInfoSTNKCustomer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:textSize="12sp"
+                            android:textColor="@color/header_text_2"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="-3dp"/>
+                    </LinearLayout>
+
+                    <!--<Switch-->
+                        <!--android:id="@+id/switchInfoSTNKCustomer"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:layout_marginBottom="8dp"-->
+                        <!--android:layout_marginRight="8dp" />-->
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKTPSTNK">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKTPSTNK"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_ktp_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKTPSTNK"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKTPSTNK"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KTP Atas Nama STNK*"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKTPSTNK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKTPSTNK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKTPSTNK"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKTPSTNK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lyItemKKSTNK">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <RelativeLayout
+                        android:id="@+id/rlImageKKSTNK"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_upload_radius_1"
+                        android:layout_alignParentLeft="true">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_kk_128"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rlImageKKSTNK"
+                        android:layout_toLeftOf="@+id/btnAddAttachmentKKSTNK"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KK Atas Nama STNK"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="6dp"/>
+
+                        <!--<TextView
+                            android:id="@+id/txtDocumentInfoSPK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34564758692412412 /n Reza Fahdillah"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_toRightOf="@+id/rlImage1"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_below="@+id/txtTitleInfo"
+                            android:visibility="gone"/>-->
+
+                        <TextView
+                            android:id="@+id/txtDefaultKKSTNK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantumkan foto"
+                            android:textSize="12sp"
+                            android:textColor="#63AAC0"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnAddAttachmentKKSTNK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <com.joooonho.SelectableRoundedImageView
+                            android:id="@+id/imgAttachmentKKSTNK"
+                            app:sriv_right_top_corner_radius="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_archieve_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnPreviewKKSTNK"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/z_upload_radius_3"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_eye_48"
+                            android:layout_centerInParent="true"
+                            android:focusable="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:id="@+id/lySwitchAlamatTinggal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Customer sesuai KTP"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@+id/lySwitchInfoAlamatTinggal"/>
+
+                    <LinearLayout
+                        android:id="@+id/lySwitchInfoAlamatTinggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:textSize="12sp"
+                            android:textColor="@color/header_text_2"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"/>
+
+                        <Switch
+                            android:id="@+id/switchInfoAlamatTinggal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:textSize="12sp"
+                            android:textColor="@color/header_text_2"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="-3dp"/>
+                    </LinearLayout>
+
+                    <!--<Switch-->
+                        <!--android:id="@+id/switchInfoAlamatTinggal"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:layout_marginBottom="8dp"-->
+                        <!--android:layout_marginRight="8dp" />-->
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/lyResAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/txtTitleAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_alamat_input"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/edAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/txtTitleAlamat"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="top|left"
+                        android:inputType="textCapCharacters"
+                        android:lines="4"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColorHint="@color/text_field_hint"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"
+                        android:hint="Alamat"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtRT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RT"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edRT"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtRT"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLength="3"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:hint="RT"
+                            android:textColor="@color/primary_text"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtRW"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RW"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edRW"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtRW"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLength="3"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:hint="RW"
+                            android:textColor="@color/primary_text"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtTitleKelurahan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kel/Desa"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/edKelurahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_below="@+id/txtTitleKelurahan"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/text_field_hint"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"
+                        android:hint="Kelurahan"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtTitleKecamatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kecamatan"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/edKecamatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_below="@+id/txtTitleKecamatan"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/text_field_hint"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"
+                        android:hint="Kecamatan"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtTitleKota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kota"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/edKota"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_below="@+id/txtTitleKota"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/text_field_hint"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"
+                        android:hint="Kota"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtTitleZipCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zipcode"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/edZipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_below="@+id/txtTitleZipCode"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/text_field_hint"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"
+                        android:hint="Zipcode"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--<EditText
+                android:id="@+id/etAlamatTinggal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="10dp"
+                android:hint="Alamat tempat tinggal"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:inputType="textMultiLine"
+                android:gravity="start"
+                android:padding="8dp"
+                android:background="@drawable/z_rounded_background_solid"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2.1"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="68dp">
+
+                <LinearLayout
+                    android:id="@+id/btnDraft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.0"
+                    android:background="@drawable/z_button_radius_empty"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_save_red_64"
+                        android:layout_marginTop="7dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_draft"
+                        android:textColor="@color/warning_color"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"/>
+
+                <LinearLayout
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.1"
+                    android:background="@drawable/z_button_radius_gradien"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:gravity="center"
+                        android:layout_marginTop="7dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_right_arrow_white" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_submit_upload_document"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toggleMenu"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="42dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="5dp"
+        android:layout_marginLeft="-300dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/z_togglemenu_background">
+            <TextView
+                android:id="@+id/txtTitleToggleMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOCUMENT CHECKLIST"
+                android:textSize="12sp"
+                android:textColor="@color/warning_color"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_margin="17dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvListToggleMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtTitleToggleMenu"
+                android:layout_marginBottom="13dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/toggleButton"
+        android:layout_width="18dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/z_togglebutton_background"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/toggleMenu">
+        <ImageView
+            android:id="@+id/imgToggle"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_chevron_white_right"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/txtCounChecklist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-13dp"/>
+
+        <TextView
+            android:id="@+id/txtCountMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-2dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

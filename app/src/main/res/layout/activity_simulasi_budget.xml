@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_building"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_lady"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/main_margin_top"
+                android:layout_marginLeft="@dimen/main_margin_half">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_back_48"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp">
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/primary_text"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"/>
+
+                    <TextView
+                        android:id="@+id/txtDealerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/primary_text"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyDealerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="-16dp"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/main_margin_wide"
+                android:layout_marginRight="@dimen/main_margin_wide">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dealer"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/atDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_border"
+                    android:textColorHint="@color/colorAccent"
+                    android:hint="Pilih dealer"
+                    android:textSize="14sp"
+                    android:completionThreshold="0"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/main_margin_wide"
+                android:layout_marginRight="@dimen/main_margin_wide">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="32dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Model Mobil"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <Spinner
+                        android:id="@+id/spinModel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:background="@drawable/spinner_border"
+                        android:visibility="gone"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/atModel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_border"
+                        android:textColorHint="@color/colorAccent"
+                        android:hint="Pilih Model"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textSize="14sp"
+                        android:completionThreshold="0"
+                        android:visibility="visible"
+                        android:paddingRight="40dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harga OTR"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/etOtr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Silahkan masukkan harga OTR"
+                        android:textSize="14sp"
+                        android:background="@drawable/z_rounded_background_solid"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:textColorHint="@color/colorAccent"
+                        android:inputType="number"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dasar Simulasi"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/cbTDP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TDP"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="12sp"/>
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/cbAngsuran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Angsuran"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="64dp"/>
+
+                        </RadioGroup>
+
+                        <!--<LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/cbTDP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TDP"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="12sp"
+                                android:textColor="@color/primary_text"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="64dp"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/cbAngsuran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Angsuran"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="12sp"
+                                android:textColor="@color/primary_text"/>
+
+                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleTdpAngsuran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_perkiraan_tdp"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/primary_text"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/etTdpAngsuran"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/text_tdp_dikehendaki"
+                            android:textSize="14sp"
+                            android:background="@drawable/z_rounded_background_solid"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:textColorHint="@color/colorAccent"
+                            android:inputType="number"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Insurance Coverage"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <Spinner
+                        android:id="@+id/spinCovInsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:background="@drawable/spinner_border"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btSimulasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simulasikan"
+                android:layout_marginTop="32dp"
+                android:textSize="16sp"
+                android:background="@drawable/gradient_button_bg"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/main_margin_wide"
+                android:layout_marginRight="@dimen/main_margin_wide"
+                android:layout_marginBottom="@dimen/main_margin_wide"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/main_margin_wide"
+        android:paddingRight="@dimen/main_margin_wide"
+        android:paddingBottom="@dimen/main_margin_wide">
+
+        <Button
+            android:id="@+id/btSimulasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simulasikan"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:background="@drawable/gradient_button_bg"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>-->
+
+</FrameLayout>

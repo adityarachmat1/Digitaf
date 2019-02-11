@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/main_margin_top"
+                android:layout_marginLeft="@dimen/main_margin_half">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_back_48"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dashboard"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/primary_text"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/primary_text"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"/>
+
+                        <TextView
+                            android:id="@+id/txtDealerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_light"
+                            android:textColor="@color/primary_text"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/main_margin_wide"
+                    android:paddingRight="@dimen/main_margin_wide"
+                    android:descendantFocusability="beforeDescendants">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="32dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Periode"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/primary_text"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"/>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/atSelectPeriode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:hint="Bulan ini"
+                            android:textColorHint="@color/colorAccent"
+                            android:textColor="@color/colorAccent"
+                            android:completionThreshold="0"
+                            android:focusable="false"
+                            android:background="@drawable/spinner_border"
+                            android:nextFocusUp="@id/atSelectPeriode"
+                            android:nextFocusLeft="@id/atSelectPeriode" />
+
+                        <LinearLayout
+                            android:id="@+id/lyCustomFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone">
+                            <AutoCompleteTextView
+                                android:id="@+id/atSelectMonth"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:textSize="14sp"
+                                android:hint="Bulan"
+                                android:textColorHint="@color/colorAccent"
+                                android:textColor="@color/colorAccent"
+                                android:completionThreshold="0"
+                                android:focusable="false"
+                                android:background="@drawable/spinner_border"
+                                android:nextFocusUp="@id/atSelectMonth"
+                                android:nextFocusLeft="@id/atSelectMonth"
+                                android:layout_marginRight="5dp"/>
+
+                            <AutoCompleteTextView
+                                android:id="@+id/atSelectYear"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:textSize="14sp"
+                                android:hint="Tahun"
+                                android:textColorHint="@color/colorAccent"
+                                android:textColor="@color/colorAccent"
+                                android:completionThreshold="0"
+                                android:focusable="false"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/spinner_border"
+                                android:nextFocusUp="@id/atSelectYear"
+                                android:nextFocusLeft="@id/atSelectYear"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textNoChart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginBottom="80dp"
+                            android:layout_gravity="center"
+                            android:text="No Chart data available"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"/>
+
+                    </LinearLayout>
+
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvLegend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_marginTop="24dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Application Status"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"/>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_application"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btEmailIncentiveReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/gradient_button_bg_dash"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="37dp">
+                        <ImageView
+                            android:id="@+id/imgEmaiIncentive"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_email_dashboard"
+                            android:layout_centerHorizontal="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_email_incentive"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/imgEmaiIncentive"
+                            android:layout_marginTop="3dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

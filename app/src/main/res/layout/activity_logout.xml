@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/ic_bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/transparent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_48"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="17dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_profile"
+                    android:textSize="@dimen/activity_title_textsize"
+                    android:textColor="@color/done_text_color_normal"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="22dp"
+                    android:layout_toRightOf="@+id/imgBack"
+                    android:layout_marginLeft="18dp"/>
+
+                <LinearLayout
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="27dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_logout"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_logout_setting"
+                        android:textSize="8sp"
+                        android:textColor="@color/warning_color"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="46dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="42dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:circle="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/imgProfile"
+                            android:layout_width="136dp"
+                            android:layout_height="136dp"
+                            android:src="@drawable/ic_empty_profile" />
+
+                        <ImageView
+                            android:id="@+id/imgEditImageProfile"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_edit"
+                            android:layout_alignRight="@+id/imgProfile"
+                            android:layout_alignBottom="@+id/imgProfile"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtTitleNik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_nik_setting"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginTop="44dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txtNIK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txtTitleDealerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_namadealer_setting"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginTop="44dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txtDealerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_nama_setting"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_email_setting"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:id="@+id/txtEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12dp"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/lyUbahPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="2.2">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_password_setting"
+                                android:textSize="12dp"
+                                android:textColor="@color/secondary_text"
+                                android:fontFamily="@font/roboto_medium" />
+        
+                            <TextView
+                                android:id="@+id/txtPassword"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="************"
+                                android:textSize="12dp"
+                                android:textColor="@color/secondary_text"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginTop="5dp"/>
+                        </LinearLayout>
+                        
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="0.8"
+                            android:src="@drawable/ic_edit"
+                            android:layout_gravity="center_vertical|right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="43dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.2"
+                            android:text="@string/text_gunakansidik_setting"
+                            android:textSize="12dp"
+                            android:textColor="@color/secondary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_gravity="center_vertical"/>
+
+                        <Switch
+                            android:id="@+id/toggleSidikJari"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:layout_gravity="right"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

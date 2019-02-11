@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingRight="@dimen/main_margin"
+            android:paddingLeft="@dimen/main_margin"
+            android:paddingTop="@dimen/main_margin_top"
+            android:paddingBottom="@dimen/main_margin_bottom">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudah pernah mendaftar?"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvAktivasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AKTIVASI"
+                    android:textSize="14sp"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/warning_color"
+                    android:fontFamily="@font/montserrat_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/lyKtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. KTP"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/etKtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nomor KTP Anda"
+                    android:textSize="14sp"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColorHint="@color/colorAccent"/>
+
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/lyNpk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvNpk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor KTP"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/etNpk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nomor KTP Anda"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama lengkap Anda sesuai KTP"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDealerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dealer Name"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="Pilih dealer Anda"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorAccent"
+                    android:completionThreshold="0"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/spinner_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_minimal_8"
+                        android:textSize="14sp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:inputType="textNoSuggestions|textVisiblePassword"
+                        android:layout_toLeftOf="@id/iv_show_password"
+                        android:background="@null"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorAccent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_show_password"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_hide"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_konfirmasi_pass_signup"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etRetypePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_minimal_8"
+                        android:textSize="14sp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:inputType="textNoSuggestions|textVisiblePassword"
+                        android:layout_toLeftOf="@id/iv_show_password_2"
+                        android:background="@null"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorAccent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_show_password_2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_hide"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daftar"
+                android:layout_marginTop="32dp"
+                android:textSize="16sp"
+                android:background="@drawable/gradient_button_bg"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_punya_akun_signup"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MASUK"
+                    android:textSize="14sp"
+                    android:background="@drawable/z_rounded_background_solid"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/warning_color"
+                    android:fontFamily="@font/montserrat_bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

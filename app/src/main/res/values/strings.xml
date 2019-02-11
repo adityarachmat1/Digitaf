@@ -1,0 +1,225 @@
+<resources>
+    <string name="app_name">DigiTAF</string>
+
+    <!--Bottom Navigation-->
+    <string name="nav_home">Home</string>
+    <string name="nav_calculator">Calculator</string>
+    <string name="nav_my_application">My Application</string>
+    <string name="nav_inquiry">Inquiry</string>
+    <string name="nav_dashboard">Dashboard</string>
+
+    <!--Firebase channel id-->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <!--Sign in-->
+    <string name="hint_email_signin">Email yang terdaftar</string>
+    <string name="hint_password_signin">Password Anda</string>
+    <string name="title_reset_password_signin">Masukkan Email untuk melakukan Reset Password</string>
+    <string name="title_link_reset_password_signin">Link untuk melakukan Reset Password telah dikirimkan ke Email Anda.</string>
+    <!--End-->
+
+    <!--Sign up-->
+    <string name="title_konfirmasi_pass_signup">Konfirmasi Password</string>
+    <string name="title_punya_akun_signup">Sudah punya Akun?</string>
+    <!--End-->
+
+    <!--Aktivasi-->
+    <string name="title_masukkan_otp_aktivasi">Masukkan OTP yang dikirimkan ke email Anda.</string>
+    <string name="title_berhasil_daftar_aktivasi">Akun Anda berhasil didaftarkan. Silahkan masukkan Kode OTP.</string>
+    <string name="title_tidakmenerima_otp_aktivasi">Tidak menerima OTP? Cek kembali Email Anda dan kirim ulang OTP.</string>
+    <string name="title_akun_berhasil_aktivasi">Akun Anda berhasil diaktivasi. Silahkan login menggunakan user yang sudah terdaftar.</string>
+    <!--End-->
+
+    <!--Home Fragment-->
+    <string name="title_settings_home">Settings</string>
+    <string name="title_notifications_home">Notifications</string>
+    <!--End-->
+
+    <!--Simulasi Kredit Fragment-->
+    <string name="content_paket_simulasi">Temukan Paket Kredit TAF yang paling sesuai dengan kebutuhan Customer</string>
+    <string name="content_nonpaket_simulasi">Hitung Simulasi Pembiayaan yang fleksibel sesuai keinginan Customer</string>
+    <string name="content_budget_simulasi">Hitung Simulasi Pembiayaan berdasarkan keadaan keuangan Customer</string>
+    <!--End-->
+
+    <!--Simulasi Kredit Result-->
+    <string name="title_addm_simulasiresult">Angsuran Dibayar Di Muka (ADDM) adalah skema pembayaran dimana Angsuran Pertama akan dibayarkan di dalam Total Down Payment (TDP)</string>
+    <string name="title_addb_simulasiresult">Angsuran Dibayar Di Belakang (ADDB) adalah skema pembayaran dimana Angsuran Pertama akan dibayarkan satu bulan setelah pembayaran Total Down Payment (TDP)</string>
+    <!--End-->
+
+    <!--Calculator Result-->
+    <string name="title_jenis_angsuran_calresult">Jenis Angsuran</string>
+    <string name="title_flat_rate_calresult">Flat Rate</string>
+    <string name="tooltip_pvpremi_calresult">Premi Asuransi Kendaraan</string>
+    <string name="tooltip_pclpremi_calresult">Premi Asuransi Jiwa</string>
+    <!--End-->
+
+    <!--Tooltip info-->
+    <string name="tooltip_valid">Aplikasi kredit sudah aktif (Go Live).</string>
+    <string name="tooltip_approve">Pengajuan aplikasi kredit telah disetujui.</string>
+    <string name="tooltip_cancel">Pengajuan aplikasi kredit dibatalkan.</string>
+    <string name="tooltip_credit_review">Pengajuan aplikasi kredit dalam tahap analisa kredit.</string>
+    <string name="tooltip_data_entry">Pengajuan aplikasi kredit dalam tahan input data.</string>
+    <string name="tooltip_reject">Pengajuan aplikasi kredit ditolak.</string>
+    <string name="tooltip_request">Pengajuan aplikasi kredit tertunda karena membutuhkan tambahan dokumen / data customer.</string>
+    <string name="tooltip_wait">Pengajuan aplikasi kredit tertunda menunggu kelengkapan dokumen customer</string>
+    <string name="tooltip_request_negotiation">Pengajuan aplikasi kredit tertunda proses negosiasi</string>
+    <string name="tooltip_request_survey">Pengajuan aplikasi kredit tertunda menunggu survey</string>
+    <!--End-->
+
+    <!--Profil activity-->
+    <string name="title_logout_profile">Log Out</string>
+    <!--End-->
+    
+    <!--Page Minimum Customer Data-->
+    <string name="title_minimum_customer_data">Minimum Customer Data</string>
+    <string name="silahkan_isi_informasi_customer">Silahkan isi Informasi Customer untuk melanjutkan proses aplikasi kredit. Dengan mengisi form berikut, Anda menyetujui Syarat dan Ketentuan yang berlaku.</string>
+    <string name="title_email">Email</string>
+    <string name="title_tipe_customer">TIPE CUSTOMER</string>
+    <string name="title_karyawan">Karyawan</string>
+    <string name="title_profesional">Professional</string>
+    <string name="title_wiraswasta">Wiraswasta</string>
+    <string name="title_corporate">Corporate</string>
+    <string name="title_field_nama">Nama</string>
+    <string name="title_field_no_hp">No. HP</string>
+    <string name="title_field_email">Email</string>
+    <string name="title_field_npwp">NPWP</string>
+    <string name="title_field_vip">VIP</string>
+    <string name="title_field_cara_pembayaran">Cara Pembayaran</string>
+    <string name="title_field_referensi">Referensi</string>
+    <string name="title_field_no_hp_referensi">No. HP Referensi</string>
+    <string name="field_hint_nama_sesuai_ktp">Nama sesuai KTP</string>
+    <string name="field_hint_nomor_hp_customer">No. HP Customer</string>
+    <string name="field_hint_email_customer">Email Customer</string>
+    <string name="field_hint_memiliki_npwp">Apakah customer memiliki NPWP?</string>
+    <string name="field_hint_adalah_vip">Apakah customer adalah VIP?</string>
+    <string name="field_hint_cara_pembayaran">Pilih cara pembayaran</string>
+    <string name="field_hint_referensi">Nama referensi Anda</string>
+    <string name="field_hint_no_hp_referensi">No. Hp Referensi</string>
+    <string name="btn_draft">DRAFT</string>
+    <string name="btn_lanjutkan">LANJUTKAN</string>
+    <!--End-->
+
+    <!--Pop up text save to draft-->
+    <string name="title_popup_savetodraft">Save ke Draft</string>
+    <string name="text_silahkan_isi_nama_savetodrft">Silahkan isi Nama Customer untuk menyimpan Simulasi Perhitungan ini.</string>
+    <string name="title_nama_customer">Nama Customer</string>
+    <string name="field_hint_nama_customer">Nama lengkap customer</string>
+    <string name="button_simpan_ke_draft">SIMPAN</string>
+    <!--End-->
+
+    <!--Pop up text save to draft saved-->
+    <string name="title_popup_savetodraft_saved">Saved</string>
+    <string name="text_perhitungan_savetodrft">Penghitungan Anda sudah disimpan di folder Draft My Application.</string>
+    <string name="button_lihat_myapplication_savetodraft_saved">Lihat My\nApplication</string>
+    <string name="button_ok_savetodraft_saved">OK</string>
+    <!--End-->
+
+    <!--Pop up text send apllication-->
+    <string name="title_popup_sendapplication">Submit Aplikasi</string>
+    <string name="text_setelah_dikirim_sendapplication">Setelah disubmit, aplikasi ini tidak bisa diedit lagi. Apakah Anda yakin informasi yang dilampirkan sudah benar? </string>
+    <string name="button_cekkembali_sendapplication">Cek Kembali</string>
+    <string name="button_ya_sendapplication">YA</string>
+    <!--End-->
+
+    <!--Pop up text sent apllication-->
+    <string name="title_popup_sentapplication">Aplikasi Dikirim</string>
+    <string name="text_atas_nama_sentapplication">Aplikasi atas nama Reza Fahdillah dengan nomor 2152516 akan dikirim. Silahkan cek folder “inquiry” untuk cek status aplikasi.</string>
+    <string name="button_home_sentapplication">HOME</string>
+    <string name="button_lihatinquiry_sentapplication">LIHAT INQUIRY</string>
+    <!--End-->
+
+    <!--Page Minimum Customer Data-->
+    <string name="title_upload_document">Upload Document</string>
+    <string name="btn_submit_upload_document">SUBMIT</string>
+    <!--End-->
+
+    <!--Pop up input-->
+    <string name="title_nik_input">NIK</string>
+    <string name="title_nama_input">Nama</string>
+    <string name="title_tempatlahir_input">Tempat Lahir</string>
+    <string name="title_tanggallahir_input">Tanggal Lahir</string>
+    <string name="title_alamat_input">Alamat</string>
+    <string name="title_agama_input">Agama</string>
+    <string name="title_statusperkawinan_input">Status Perkawinan</string>
+    <string name="title_pekerjaan_input">Pekerjaan</string>
+    <string name="title_warganegara_input">Kewarganegaraan</string>
+    <string name="title_berlaku_input">Berlaku Hingga</string>
+    <string name="button_saveupdate">SAVE &amp; UPDATE</string>
+    <string name="title_jeniskelamin">Jenis Kelamin</string>
+    <!--End-->
+
+    <!--Init text for Login-->
+    <string name="text_username_tidak_boleh_kosong">Username tidak boleh kosong.</string>
+    <string name="text_password_tidak_boleh_kosong">Password tidak boleh kosong.</string>
+    <!--End-->
+
+    <!--Init text for Register-->
+    <string name="text_email_tidak_boleh_kosong">Email tidak boleh kosong.</string>
+    <string name="text_npkno_tidak_boleh_kosong">Nomor NPK tidak boleh kosong.</string>
+    <string name="text_ktpno_tidak_boleh_kosong">Nomor KTP tidak boleh kosong.</string>
+    <string name="text_fullname_tidak_boleh_kosong">Nama tidak boleh kosong.</string>
+    <string name="text_dealername_tidak_boleh_kosong">Pilih dealer terlebih dahulu.</string>
+    <string name="text_pass_tidak_boleh_kosong">Password tidak boleh kosong.</string>
+    <string name="text_passkonfirmasi_tidak_boleh_kosong">Password Konfirmasi tidak boleh kosong.</string>
+    <string name="text_panjang_password">Panjang Password minimal 8 karakter.</string>
+    <string name="text_panjang_passwordkonfirmasi">Panjang Password Konfirmasi minimal 8 karakter.</string>
+    <string name="text_password_tidak_sama">Password dan Password Konfirmasi tidak boleh berbeda.</string>
+    <string name="text_minimal_8">Minimal 8 karakter.</string>
+    <!--End-->
+
+    <!--Init text for setting activity-->
+    <string name="activity_profile">Profile</string>
+    <string name="text_logout_setting">Log Out</string>
+    <string name="text_nik_setting">NIK</string>
+    <string name="text_namadealer_setting">Nama Dealer</string>
+    <string name="text_namabranch_setting">Nama Cabang</string>
+    <string name="text_nama_setting">Nama</string>
+    <string name="text_email_setting">Email</string>
+    <string name="text_password_setting">Password</string>
+    <string name="text_gunakansidik_setting">Gunakan Sidik Jari</string>
+    <!--End-->
+
+    <!--Init text for ubah password activity-->
+    <string name="activity_ubahpassword">Ganti Password</string>
+    <string name="activity_passwordlama">Password Lama</string>
+    <string name="activity_passwordbaru">Password Baru</string>
+    <string name="activity_konfirmasipasswordbaru">Konfirmasi Password Baru</string>
+    <string name="activity_hintpassword">password</string>
+    <string name="pass_savenewpassword">SAVE NEW PASSWORD</string>
+    <string name="pass_lamadanbarutidakbolehsama">Password lama tidak boleh sama dengan password baru.</string>
+    <string name="pass_barudankonfirmasitidaksama">Password baru dan konfirmasi password tidak sama.</string>
+    <!--End-->
+
+    <!--Init text for simulasi budget activity-->
+    <string name="text_perkiraan_tdp">Perkiraan TDP</string>
+    <string name="text_perkiraan_angsuranperbulan">Perkiraan Angsuran per Bulan</string>
+    <string name="text_tdp_dikehendaki">Masukkan TDP yang Anda kehendaki</string>
+    <string name="text_masukkan_jumlah_angsuran">Masukkan jumlah angsuran per bulan</string>
+    <!--<string name="text_email_setting">Email</string>-->
+    <!--<string name="text_password_setting">Password</string>-->
+    <!--<string name="text_gunakansidik_setting">Gunakan Sidik Jari</string>-->
+    <!--End-->
+
+    <!--Init text for simulasi budget activity-->
+    <string name="text_email_incentive">EMAIL MY INCENTIVE REPORT</string>
+    <!--End-->
+
+    <!--Init text for onboard activity-->
+    <string name="text_onboard_title1">Simulasi dan Kalkulator Kredit</string>
+    <string name="text_onboard_title2">Input &amp; Upload Minimum Customer Data</string>
+    <string name="text_onboard_title3">Easy Application Status Monitoring</string>
+    <string name="text_onboard_content1">Anda dapat melakukan Simulasi Kredit TAF dengan rate dan paket terupdate di genggaman tangan Anda. Pilih salah satu tipe perhitungan dan Anda akan mendapatkan besaran Total Bayar Pertama dan Angsuran per Bulan untuk customer Anda.</string>
+    <string name="text_onboard_content2">Anda dapat langsung menginput aplikasi ke TAF dengan menyertakan minimum data customer, serta mengupload / attach dokumen pendukung. Cukup KTP, SPK, dan Keterangan Pekerjaan / Usaha untuk submit, dan dokumen lainnya dapat disusulkan! Ditambah dengan Teknologi OCR sehingga mempercepat proses pengisian.</string>
+    <!--<string name="text_onboard_content2">Anda dapat langsung menginput aplikasi ke TAF dengan menyertakan minimum customer data, serta mengupload/attach dokumen pendukung. Cukup KTP, SPK, Keterangan Pekerjaan / Usaha dan KTP Atas Nama STNK untuk submit, dan dokumen lainnya dapat disusulkan! Ditambah dengan teknologi OCR sehingga mempercepat proses pengisian.</string>-->
+    <string name="text_onboard_content3">Anda dapat memonitor seluruh pekerjaan dan status aplikasi Anda melalui menu Inquiry dan Dashboard. Bahkan, Anda dapat meng-email Report Insentif Anda.</string>
+    <string name="btn_onboard_selanjutnya">SELANJUTNYA</string>
+    <string name="btn_onboard_mulai">MULAI</string>
+    <string name="text_onboard_skip">Skip</string>
+    <!--End-->
+    
+    <string-array name="myapplication_tabs">
+        <item>Draft</item>
+        <item>Outbox</item>
+        <item>Need Action</item>
+    </string-array>
+</resources>

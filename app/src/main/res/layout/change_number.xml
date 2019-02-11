@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:scrollbars="none"
+    android:fillViewport="true">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:id="@+id/lyParent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_building"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_guy"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginBottom="-65dp"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/main_margin"
+        android:paddingTop="@dimen/main_margin_top"
+        android:paddingRight="@dimen/main_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_logo" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Update Phone Number"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Customer Name"
+                    android:textColor="@color/primary_text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/z_rounded_background"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etNameCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textSize="14sp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="13dp"
+                        android:inputType="phone"
+                        android:background="@null"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorAccent"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Old Number"
+                    android:textColor="@color/primary_text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/z_rounded_background"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etOld_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textSize="14sp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="13dp"
+                        android:inputType="phone"
+                        android:background="@null"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorAccent"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="New Number"
+                    android:textColor="@color/primary_text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/z_rounded_background"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etChange_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Input new number"
+                        android:textSize="14sp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="13dp"
+                        android:inputType="phone"
+                        android:background="@null"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorAccent"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/gradient_button_bg"
+                android:text="Update Number"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
+</ScrollView>

@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/nestedMinimum"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/main_margin_bottom"
+            android:paddingTop="@dimen/main_margin_top">
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginLeft="@dimen/main_margin_half"-->
+                <!--android:layout_marginRight="@dimen/main_margin_half">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_back"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:src="@drawable/ic_back_48"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_toLeftOf="@id/ly_option"-->
+                    <!--android:layout_toRightOf="@+id/iv_back"-->
+                    <!--android:layout_marginLeft="8dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Hasil Perhitungan"-->
+                        <!--android:textColor="@color/primary_text"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:fontFamily="@font/roboto_medium"/>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/txtName"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="-"-->
+                            <!--android:textColor="@color/primary_text"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:fontFamily="@font/roboto_medium"/>-->
+
+                        <!--<View-->
+                            <!--android:layout_width="1dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:background="@color/secondary_text"-->
+                            <!--android:layout_marginLeft="4dp"-->
+                            <!--android:layout_marginRight="4dp"/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/txtDealerName"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="-"-->
+                            <!--android:textColor="@color/primary_text"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:fontFamily="@font/roboto_light"/>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ly_option"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_alignParentRight="true">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="55dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:gravity="center">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="25dp"-->
+                            <!--android:layout_height="25dp"-->
+                            <!--android:src="@drawable/ic_email_black_48"/>-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="8sp"-->
+                            <!--android:text="Email"-->
+                            <!--android:textColor="@color/warning_color"-->
+                            <!--android:fontFamily="@font/roboto_medium"/>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_margin_top"
+                    android:layout_marginLeft="@dimen/main_margin_half"
+                    android:layout_marginRight="@dimen/main_margin_half">
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back_48"/>
+
+                    <TextView
+                        android:id="@+id/txtToolbarHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hasil Perhitungan"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toRightOf="@+id/iv_back"
+                        android:layout_marginLeft="18dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_alignLeft="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtSeparator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="|"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/txtName"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtDealerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_toRightOf="@+id/txtSeparator"
+                        android:layout_marginTop="5dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/llEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal"
+                        android:visibility="visible">
+                        <ImageView
+                            android:id="@+id/ivEmail"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_email_black_48"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_email"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="#F23934"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/main_margin_wide"
+                android:paddingRight="@dimen/main_margin_wide"
+                android:paddingBottom="16dp"
+                android:paddingTop="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="32sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/secondary_text"/>
+
+                    <TextView
+                        android:id="@+id/tvModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Kijang Innova 2.0 G M/T 2018"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_text"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="32dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type Mobil"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/secondary_text"/>
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MX-AA45tc"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_text"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="32dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Harga OTR"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvOtr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 302,15jt"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_jenis_angsuran_calresult"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvFirstInstallment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ADDM"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Paket"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvPaket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Venus"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tenor"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvTenor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="60x"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_flat_rate_calresult"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6.25%"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Angsuran"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvAngsuran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 5,434jt"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="32dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DP"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvDp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 23.45JT"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TDP"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvTdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 23.45JT"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lntotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="32dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Hutang"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalHutang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/txtTitlePVPremi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PV Premi"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="12sp"
+                                android:textColor="@color/secondary_text"
+                                android:layout_alignParentLeft="true" />
+
+                            <ImageView
+                                android:id="@+id/iv_tooltipPVPremi"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/ic_tooltip"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/txtTitlePVPremi"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvPVPremi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ln_total2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="32dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/txtTitlePCLPremi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PCL Premi"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="12sp"
+                                android:textColor="@color/secondary_text"
+                                android:layout_alignParentLeft="true" />
+
+                            <ImageView
+                                android:id="@+id/iv_tooltipPCLPremi"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/ic_tooltip"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/txtTitlePCLPremi"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvPCLPremi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Admin Fee"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+
+                        <TextView
+                            android:id="@+id/tvAdminFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 0"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/tvUlangi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ULANGI PERHITUNGAN?"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/z_rounded_background"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/warning_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2.1"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="68dp">
+                <LinearLayout
+                    android:id="@+id/btnDraft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_button_radius_empty"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_save_red_64"
+                        android:layout_marginTop="7dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_draft"
+                        android:textColor="@color/warning_color"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <LinearLayout
+                    android:id="@+id/btnLanjutkan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_button_radius_gradien"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:gravity="center"
+                        android:layout_marginTop="7dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_right_arrow_white"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LANJUTKAN"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

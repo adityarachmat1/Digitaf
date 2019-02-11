@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#04658C</color>
+    <color name="itemColor">#424242</color>
+    <color name="background">#FFFFFF</color>
+    <color name="selectedText">#1976D2</color>
+    <color name="textColor">#616161</color>
+    <color name="textInvers">#FFFFFF</color>
+
+    <color name="primary_text">#000000</color>
+    <color name="secondary_text">#333333</color>
+    <color name="warning_color">#F23934</color>
+    <color name="white">#FFFFFF</color>
+    <color name="separator">#E0E0E0</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="header_text_2">#333333</color>
+    <color name="text_field_hint">#63AAC0</color>
+
+</resources>

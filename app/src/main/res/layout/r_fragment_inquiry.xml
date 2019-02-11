@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:id="@+id/lyRefresh"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp">
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back_48"/>
+
+                    <TextView
+                        android:id="@+id/txtToolbarHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inquiry"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toRightOf="@+id/imgBack"
+                        android:layout_marginLeft="18dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_alignLeft="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtSeparator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="|"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/txtName"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtCabang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_toRightOf="@+id/txtSeparator"
+                        android:layout_marginTop="5dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="17dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutDealerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinDealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:hint="Pilih dealer Anda"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textColorHint="#63AAC0"
+                        android:completionThreshold="0"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingRight="40dp"
+                        android:background="@drawable/spinner_border" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:id="@+id/rv_Search">
+                    <EditText
+                        android:id="@+id/edSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="search..."
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:imeOptions="actionDone"
+                        android:lines="1"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingRight="40dp"
+                        android:textColorHint="#63AAC0"/>
+
+                    <ImageView
+                        android:id="@+id/imgSearch"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_search"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_SearchSO"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone">
+                    <EditText
+                        android:id="@+id/edSearchSO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="search name sales officer"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:imeOptions="actionDone"
+                        android:lines="1"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingRight="40dp"
+                        android:textColorHint="#63AAC0"/>
+
+                    <ImageView
+                        android:id="@+id/imgSearchSO"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_search"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3.6"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.4"
+                        android:text="Tanggal Kirim"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="3dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:text="Status"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:weightSum="3.6"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1">
+                        <EditText
+                            android:id="@+id/edFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="from"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:focusable="false"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="13dp"
+                            android:paddingBottom="13dp"
+                            android:paddingRight="35dp"
+                            android:textColorHint="#63AAC0" />
+
+                        <ImageView
+                            android:id="@+id/imgFrom"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_calendar"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="-"
+                        android:textColor="#000000"
+                        android:textSize="23sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1">
+                        <EditText
+                            android:id="@+id/edTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="to"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:focusable="false"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="13dp"
+                            android:paddingBottom="13dp"
+                            android:paddingRight="35dp"
+                            android:textColorHint="#63AAC0" />
+
+                        <ImageView
+                            android:id="@+id/imgTo"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_calendar"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:textColor="#000000"
+                        android:textSize="23sp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1">
+                        <AutoCompleteTextView
+                            android:id="@+id/edStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="ALL"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:focusable="false"
+                            android:lines="1"
+                            android:completionThreshold="1000"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="13dp"
+                            android:paddingBottom="13dp"
+                            android:paddingRight="40dp"
+                            android:textColorHint="#63AAC0" />
+
+                        <ImageView
+                            android:id="@+id/imgStatus"
+                            android:layout_width="15dp"
+                            android:layout_height="8.75dp"
+                            android:src="@drawable/ic_chevron_down"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ProgressBar
+                        android:id="@+id/pbInquiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvInquiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

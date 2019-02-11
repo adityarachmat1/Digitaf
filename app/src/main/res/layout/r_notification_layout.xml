@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:id="@+id/lyRefresh"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp">
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back_48"/>
+
+                    <TextView
+                        android:id="@+id/txtToolbarHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notifikasi"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toRightOf="@+id/imgBack"
+                        android:layout_marginLeft="18dp"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/llUploadAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_upload_all"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload All"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="#F23934"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Andrianto Siswanto"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_alignLeft="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtSeparator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="|"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/roboto_light"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/txtName"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtCabang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto2000 Kapuk"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_light"
+                        android:layout_below="@+id/txtToolbarHeader"
+                        android:layout_toRightOf="@+id/txtSeparator"
+                        android:layout_marginTop="5dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="17dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutDealerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinDealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:hint="Pilih dealer Anda"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textColorHint="#63AAC0"
+                        android:completionThreshold="0"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingRight="40dp"
+                        android:background="@drawable/spinner_border" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3.6"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ProgressBar
+                        android:id="@+id/pbInquiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvInquiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "763425701579",
+    "firebase_url": "https://digitaf-de7ee.firebaseio.com",
+    "project_id": "digitaf-de7ee",
+    "storage_bucket": "digitaf-de7ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763425701579:android:49a11bc6dfba2f0a",
+        "android_client_info": {
+          "package_name": "com.drife.digitaf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763425701579-ec30n51n92vg5mq7trptmc7tqvtjtbbk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drife.digitaf",
+            "certificate_hash": "fd99ced4bcf394a63dd9f0256f10901eb7282ece"
+          }
+        },
+        {
+          "client_id": "763425701579-n8sp1q78scihv9km40rf071ip9v51f39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoJVn2gxIU8rW0dZHZcWaDmFqbW7q-ilQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763425701579-n8sp1q78scihv9km40rf071ip9v51f39.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "763425701579-qcqt1ane65sa7bhpl63h2aq5eg3f2nq0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.drife.digitaf"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="Home"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/action_kalkulator"
+        android:orderInCategory="100"
+        android:title="Calculator"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_calculator"/>
+
+    <item
+        android:id="@+id/action_draft"
+        android:orderInCategory="100"
+        android:title="My Application"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_my_app"/>
+
+    <item
+        android:id="@+id/action_inquiry"
+        android:orderInCategory="100"
+        android:title="Inquiry"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_inquiry"/>
+
+    <item
+        android:id="@+id/action_dashboard"
+        android:orderInCategory="100"
+        android:title="Dashboard"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_dashboard"/>
+</menu>

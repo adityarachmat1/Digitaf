@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/aditya/Android Project/digiTAF/digitaf-android/viewpagerindicator/src/main/assets"/><source path="/home/aditya/Android Project/digiTAF/digitaf-android/viewpagerindicator/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/aditya/Android Project/digiTAF/digitaf-android/viewpagerindicator/src/debug/assets"/></dataSet></merger>

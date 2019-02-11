@@ -1,0 +1,163 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:id="@+id/lyRefresh"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <EditText
+                    android:id="@+id/edSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="search..."
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:background="@drawable/z_rounded_background_myapplication"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:paddingRight="40dp"
+                    android:textColorHint="#63AAC0"/>
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Simpan"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:weightSum="2.1"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/lyFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/edFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="from"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:focusable="false"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingRight="40dp"
+                        android:textColorHint="#63AAC0" />
+
+                    <ImageView
+                        android:id="@+id/imgFrom"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/lyTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/edTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="to"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:focusable="false"
+                        android:background="@drawable/z_rounded_background_myapplication"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingRight="40dp"
+                        android:textColorHint="#63AAC0" />
+
+                    <ImageView
+                        android:id="@+id/imgTo"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:id="@+id/pbDraft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvDraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

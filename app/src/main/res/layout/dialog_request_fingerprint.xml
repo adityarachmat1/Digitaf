@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_close_20" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fitur Sidik Jari"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="21sp"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fingerprint_red_128"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAF TVC App menemukan bahwa perangkat yang Anda gunakan mendukung fitur kemanan dengan sidik jari."
+            android:gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:textColor="@color/primary_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apakah anda ingin mengaktifkan fitur sidik jari untuk menggantikan penggunaan password? (Anda dapat mengubah opsi ini lain kali)"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/lyLewati"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lewati"
+                android:textColor="@color/warning_color"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyPakai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_button_bg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_fingerprint_white_64"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakai Sidik Jari"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

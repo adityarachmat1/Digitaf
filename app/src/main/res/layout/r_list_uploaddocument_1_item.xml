@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtTitleInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apakah istri/suami bekerja?"
+            android:textColor="@color/primary_text"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/switchInfo"/>
+
+        <Switch
+            android:id="@+id/switchInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp" />
+
+        <!--<ToggleButton
+            android:id="@+id/tbInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"/>-->
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

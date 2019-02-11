@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:id="@+id/lyItem">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+        <RelativeLayout
+            android:id="@+id/rlImage1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/z_upload_radius_1"
+            android:layout_alignParentLeft="true">
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_centerInParent="true"
+                android:focusable="false"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtTitleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KTP*"
+            android:textSize="12sp"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_toRightOf="@+id/rlImage1"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/txtTitleCantumkanFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantumkan foto"
+            android:textSize="12sp"
+            android:textColor="#63AAC0"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_toRightOf="@+id/rlImage1"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/txtTitleInfo"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/txtDocumentInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34564758692412412\nReza Fahdillah"
+            android:textSize="12sp"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_toRightOf="@+id/rlImage1"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/txtTitleInfo"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/btnAddAttachment"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/z_upload_radius_2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_archieve_48"
+                android:layout_centerInParent="true"
+                android:focusable="false"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnPreview"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/z_upload_radius_3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_eye_48"
+                android:layout_centerInParent="true"
+                android:focusable="false"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

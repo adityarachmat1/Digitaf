@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingRight="@dimen/main_margin"
+            android:paddingLeft="@dimen/main_margin"
+            android:paddingTop="@dimen/main_margin_top"
+            android:paddingBottom="@dimen/main_margin_bottom">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktivasi"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_masukkan_otp_aktivasi"
+                android:textSize="12sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTP"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/primary_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/etOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="- - - -"
+                    android:textSize="14sp"
+                    android:background="@drawable/z_rounded_background"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
+                    android:inputType="number"
+                    android:lines="1"/>
+
+                <Button
+                    android:id="@+id/btLanjutkan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lanjutkan"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/gradient_button_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_tidakmenerima_otp_aktivasi"
+                android:textSize="12sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/primary_text"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Email"
+                    android:textSize="14sp"
+                    android:lines="1"
+                    android:background="@drawable/z_rounded_background"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="textEmailAddress"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvResend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kirim Ulang OTP"
+                android:textSize="14sp"
+                android:background="@drawable/z_rounded_background"
+                android:paddingTop="14dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:gravity="center"
+                android:textColor="@color/warning_color"
+                android:layout_marginTop="32dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kembali ke Sign In"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/warning_color"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

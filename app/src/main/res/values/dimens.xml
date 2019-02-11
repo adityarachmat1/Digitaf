@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_margin">32dp</dimen>
+    <dimen name="main_margin_half">18dp</dimen>
+    <dimen name="main_margin_wide">48dp</dimen>
+    <dimen name="main_margin_top">16dp</dimen>
+    <dimen name="main_margin_bottom">8dp</dimen>
+    <dimen name="edittext_height">40dp</dimen>
+
+    <dimen name="activity_title_textsize">18sp</dimen>
+    <dimen name="listitem_toggle_height">45dp</dimen>
+
+    <dimen name="onboard_title_size">21sp</dimen>
+    <dimen name="onboard_title_margin">71dp</dimen>
+    <dimen name="onboard_image_size">200dp</dimen>
+    <dimen name="onboard_message_margin">25dp</dimen>
+    <dimen name="onboard_btn_height">40dp</dimen>
+
+    <dimen name="overscreen_cardview_height">100dp</dimen>
+</resources>

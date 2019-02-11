@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:camerakit="http://schemas.android.com/tools"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="235dp"
+            android:background="@drawable/z_rounded_background_camera"
+            android:padding="2dp">
+
+            <com.flurgle.camerakit.CameraView
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                camerakit:ckFlash="off"
+                camerakit:ckFocus="continuous"
+                app:ckMethod="still"
+                app:ckCropOutput="true"/>
+
+            <!--<com.camerakit.CameraKitView
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                app:camera_flash="auto"
+                app:camera_focus="continuous"
+                app:camera_permissions="camera"/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="300dp"-->
+                    <!--android:layout_height="190dp"-->
+                    <!--android:background="@drawable/z_rounded_background_camera2"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="75dp"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--android:background="@drawable/z_rounded_background_camera3"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="40dp"-->
+                    <!--android:layout_marginTop="55dp"/>-->
+
+            <!--</RelativeLayout>-->
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:id="@+id/lyCapture"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@drawable/gradient_button_bg_without_padding">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_camera"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyDone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@drawable/gradient_button_bg_without_padding"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_done"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_building"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_lady"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/main_margin_top"
+            android:layout_marginLeft="@dimen/main_margin_half">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back_48"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simulasi Kredit - Paket"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_text"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/primary_text"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"/>
+
+                    <TextView
+                        android:id="@+id/txtDealerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@color/primary_text"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="32dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih Paket"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/main_margin_wide"
+                        android:layout_marginRight="@dimen/main_margin_wide"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_paket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyDealerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/main_margin_wide"
+                    android:layout_marginRight="@dimen/main_margin_wide"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dealer"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/atDealer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/spinner_border"
+                        android:textColorHint="@color/colorAccent"
+                        android:hint="Pilih dealer"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textSize="14sp"
+                        android:completionThreshold="0"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/main_margin_wide"
+                    android:layout_marginRight="@dimen/main_margin_wide">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Model Mobil"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <Spinner
+                        android:id="@+id/spinMobil"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:paddingLeft="16dp"
+                        android:background="@drawable/spinner_border"
+                        android:visibility="gone"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/atModel"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/spinner_border"
+                        android:textColorHint="@color/colorAccent"
+                        android:hint="Pilih Model"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textSize="14sp"
+                        android:completionThreshold="0"
+                        android:visibility="visible"
+                        android:paddingRight="40dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/main_margin_wide"
+                    android:layout_marginRight="@dimen/main_margin_wide">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harga OTR"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/edOTR"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:hint="Silahkan masukkan harga OTR"
+                        android:textSize="14sp"
+                        android:inputType="number"
+                        android:background="@drawable/z_rounded_background_solid"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorAccent"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btSimulasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Simulasikan"
+                    android:layout_marginTop="64dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/gradient_button_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/main_margin_wide"
+                    android:layout_marginRight="@dimen/main_margin_wide"
+                    android:layout_marginBottom="@dimen/main_margin_wide"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

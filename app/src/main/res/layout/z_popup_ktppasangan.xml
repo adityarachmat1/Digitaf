@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#55000000">
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rlInputImageContainer"
+                        android:layout_width="80dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/z_popupinput_radius_1">
+
+                        <ImageView
+                            android:id="@+id/imgInputType"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_ktp_128" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtTitleInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginRight="11dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toLeftOf="@+id/imgClose"
+                        android:layout_toRightOf="@+id/rlInputImageContainer"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="KTP Istri/Suami"
+                        android:textColor="@color/header_text_2"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="18.8dp"
+                        android:layout_height="20.8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="13dp"
+                        android:layout_marginTop="11dp"
+                        android:src="@drawable/ic_close_20" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_marginRight="35dp"
+                    android:id="@+id/lyParentImage">
+
+                    <ImageView
+                        android:id="@+id/imgBackgroud"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_popupinput_radius_2" />
+
+                    <RelativeLayout
+                        android:id="@+id/imgPdfAttach"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/z_popupinput_radius_2"
+                        android:visibility="gone">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_file_pdf"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                    <com.joooonho.SelectableRoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imgInputUpload"
+                        app:sriv_right_top_corner_radius="10dp"
+                        app:sriv_right_bottom_corner_radius="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"/>
+
+                    <ImageView
+                        android:id="@+id/ivPicture"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_96" />
+
+                    <RelativeLayout
+                        android:id="@+id/lyDeleteImage"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignRight="@+id/imgInputUpload"
+                        android:layout_alignTop="@+id/imgInputUpload"
+                        android:background="@drawable/z_popupinput_radius_3"
+                        android:visibility="gone">
+                        <ImageView
+                            android:id="@+id/ivDeleteImage"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_bin" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/lyRadioGrup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/rbTersedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tersedia"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="14sp"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/rbMenyusul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menyusul"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="32dp"/>
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:id="@+id/lyParentPromiseDate"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtTitlePromiseDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promise Date"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="12sp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/lyPromiseDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_below="@+id/txtTitlePromiseDate"
+                        android:background="@drawable/z_rounded_background">
+
+                        <TextView
+                            android:id="@+id/txtPromiseDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/colorAccent"
+                            android:textColor="@color/primary_text"
+                            android:hint="DD/MM/YYYY"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/ivDate"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_calendar"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp">
+                        <TextView
+                            android:id="@+id/txtTitleNik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_nik_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edNik"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:textColorHint="@color/text_field_hint"
+                            android:layout_below="@+id/txtTitleNik"
+                            android:textColor="@color/primary_text"
+                            android:hint="NIK"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp">
+                        <TextView
+                            android:id="@+id/txtTitleNama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_nama_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="textCapCharacters"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:textColorHint="@color/text_field_hint"
+                            android:layout_below="@+id/txtTitleNama"
+                            android:textColor="@color/primary_text"
+                            android:hint="Nama"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp">
+                        <TextView
+                            android:id="@+id/txtTitleTempatLahir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_tempatlahir_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edTempatLahir"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="textCapCharacters|textMultiLine"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:textColorHint="@color/text_field_hint"
+                            android:layout_below="@+id/txtTitleTempatLahir"
+                            android:textColor="@color/primary_text"
+                            android:hint="Tempat lahir"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/txtTitleTanggalLahir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_tanggallahir_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edTanggaLahir"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:textColorHint="@color/text_field_hint"
+                            android:layout_below="@+id/txtTitleTanggalLahir"
+                            android:textColor="@color/primary_text"
+                            android:hint="Tanggal lahir"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtTglLahir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Lahir"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/lyTglLahir"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTglLahir"
+                            android:background="@drawable/z_rounded_background">
+
+                            <TextView
+                                android:id="@+id/txtBirthDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColorHint="@color/colorAccent"
+                                android:textColor="@color/primary_text"
+                                android:hint="DD/MM/YYYY"
+                                android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                android:id="@+id/ivBirthDate"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_calendar"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="8dp"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp">
+                        <TextView
+                            android:id="@+id/txtTitleJenisKelamin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_jeniskelamin"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinJenisKelamin"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleJenisKelamin"
+                            android:background="@drawable/spinner_border"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="14sp"
+                            android:spinnerMode="dialog" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleAlamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_alamat_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edAlamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_below="@+id/txtTitleAlamat"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="top|left"
+                            android:inputType="textCapCharacters|textMultiLine"
+                            android:lines="4"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Alamat"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txtRT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RT"
+                                android:textColor="@color/primary_text"
+                                android:fontFamily="@font/roboto_medium"
+                                android:layout_marginBottom="2dp"
+                                android:textSize="12sp"/>
+
+                            <EditText
+                                android:id="@+id/edRT"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                android:layout_below="@+id/txtRT"
+                                android:background="@drawable/z_rounded_background_myapplication"
+                                android:fontFamily="@font/roboto_regular"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLength="3"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColorHint="@color/text_field_hint"
+                                android:textSize="14sp"
+                                android:hint="RT"
+                                android:textColor="@color/primary_text"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txtRW"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RW"
+                                android:textColor="@color/primary_text"
+                                android:fontFamily="@font/roboto_medium"
+                                android:layout_marginBottom="2dp"
+                                android:textSize="12sp"/>
+
+                            <EditText
+                                android:id="@+id/edRW"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                android:layout_below="@+id/txtRW"
+                                android:background="@drawable/z_rounded_background_myapplication"
+                                android:fontFamily="@font/roboto_regular"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLength="3"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColorHint="@color/text_field_hint"
+                                android:textSize="14sp"
+                                android:hint="RW"
+                                android:textColor="@color/primary_text"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleKelurahan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kel/Desa"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edKelurahan"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleKelurahan"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="textCapCharacters"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Kelurahan"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleKecamatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kecamatan"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edKecamatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleKecamatan"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="textCapCharacters"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Kecamatan"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleKota"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kota"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edKota"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleKota"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="textCapCharacters"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Kota"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtTitleZipCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zipcode"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edZipCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleZipCode"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Zipcode"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleAgama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agama"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinAgama"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleAgama"
+                            android:background="@drawable/spinner_border"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="14sp"
+                            android:spinnerMode="dialog" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitleStatusPerkawinan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_statusperkawinan_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinStatusPerkawinan"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleStatusPerkawinan"
+                            android:background="@drawable/spinner_border"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="14sp"
+                            android:spinnerMode="dialog" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp">
+
+                        <TextView
+                            android:id="@+id/txtTitlePekerjaan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_pekerjaan_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edPekerjaan"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitlePekerjaan"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="textCapCharacters"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Pekerjaan"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtTitleKewarganegaraan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_warganegara_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edKewarganegaraan"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleKewarganegaraan"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Kewarganegaraan" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="21dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtTitleBerlakuHingga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_berlaku_input"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <EditText
+                            android:id="@+id/edBerlakuHingga"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/txtTitleBerlakuHingga"
+                            android:background="@drawable/z_rounded_background_myapplication"
+                            android:fontFamily="@font/roboto_regular"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColorHint="@color/text_field_hint"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"
+                            android:hint="Berlaku hingga" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtTitleBerlaku"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Berlaku Hingga"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto_medium"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="12sp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutSeumurHidup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtTitleBerlaku"
+                            android:layout_marginBottom="5dp">
+                            <CheckBox
+                                android:id="@+id/cbSeumurHidup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-7dp"/>
+
+                            <TextView
+                                android:id="@+id/txtSeumurHidup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Seumur Hidup"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColorHint="@color/colorAccent"
+                                android:textColor="@color/primary_text"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/cbSeumurHidup"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lyBerlakuHingga"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_below="@+id/layoutSeumurHidup"
+                            android:background="@drawable/z_rounded_background">
+
+                            <TextView
+                                android:id="@+id/txtBerlaku"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColorHint="@color/colorAccent"
+                                android:textColor="@color/primary_text"
+                                android:hint="DD/MM/YYYY"
+                                android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                android:id="@+id/ivBerlakuHingga"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_calendar"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="8dp"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSaveUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="27dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@drawable/z_button_radius_gradien"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/button_saveupdate"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
